@@ -109,6 +109,8 @@ typedef struct JsonHttpResponse {
 }
 
 - (void) check:(CDVInvokedUrlCommand *)command {
+    self.deploy_server = @"https://apps.ionic.io";
+
     self.appId = [command.arguments objectAtIndex:0];
     self.channel_tag = [command.arguments objectAtIndex:1];
 
